@@ -1,31 +1,25 @@
-import React from "react";
-// import PropTypes from 'prop-types';
-import { useDispatch } from "react-redux";
-import { deleteContact } from "redux/contactSlice";
-import { ContactWrapper, ContactName, ContactNumber, DeleteButton } from './ContactListItem.styled'
+import { useDispatch } from 'react-redux';
+import { deleteContacts } from 'redux/contactsSlice';
+import {
+  ContactWrapper,
+  ContactNumber,
+  ContactName,
+  DeleteButton
+} from 'components/ContactListItem/ContactListItem.styled';
 
-const ContactListItem = ({ id, name, number }) => {
+export const ContactListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id))
-    return (
-      <ContactWrapper key={id}>
-        <ContactName>
-            {name}
-            <ContactNumber> 
-                {number}
-            </ContactNumber>
-        </ContactName>
-        <DeleteButton onClick={handleDelete}>Delete</DeleteButton>
-    </ContactWrapper>
-    );
-  }; 
+  const handleDelete = () => dispatch(deleteContacts(id));
 
-export default ContactListItem;
-
-// ContactListItem.propTypes = {
-//     name: PropTypes.string.isRequired,
-//     number: PropTypes.string.isRequired,
-//     id: PropTypes.string.isRequired,
-//     onDeleteContact: PropTypes.func.isRequired,
-//   };
-  
+  return (
+    <ContactWrapper key={id}>
+      <ContactName>
+          {name}
+          <ContactNumber> 
+              {number}
+          </ContactNumber>
+      </ContactName>
+      <DeleteButton onClick={handleDelete}>Delete</DeleteButton>
+  </ContactWrapper>
+  );
+}; 

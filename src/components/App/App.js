@@ -1,6 +1,6 @@
-import ContactList from 'components/ContactList';
-import ContactForm from 'components/ContactForm';
-import Filter from 'components/Filter';
+import { ContactForm } from '../ContactForm/ContactForm'
+import { Filter } from '../Filter/Filter';
+import { ContactList } from '../ContactList/ContactList';
 import { Section,  Title, SubTitle, ListWrapper} from "components/App/App.styled";
 
 export const App = () => {
@@ -16,4 +16,5 @@ export const App = () => {
     </Section>
     );
   };
+
 

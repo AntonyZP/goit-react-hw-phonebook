@@ -29,7 +29,7 @@ padding-bottom: 6px;
 font-size: 14px;
 color: #ffffff;
 width: 100px;
-background: #2196f3;
+background: #553E3E;
 border: none;
 border-radius: 7px;
 box-shadow: 2px 3px 5px #3d3d3d;
@@ -37,6 +37,6 @@ cursor: pointer;
 transition: all 100ms ease 0s;
 &:hover,
 &:focus {
-  background: blue;
-  box-shadow: 2px 7px 7px #188ce8;;
+  background: #7D5F49;
+  box-shadow: 2px 7px 7px #7D5F49;;
 `;
